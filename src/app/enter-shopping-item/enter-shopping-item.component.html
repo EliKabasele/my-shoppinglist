@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-10">
+    <h3>Add new Item</h3>
+    <label>Item Name</label>
+    <input type="text" class="form-control" [(ngModel)]="newItemName">
+    <label>Quantity?</label>
+    <input type="text" class="form-control" [(ngModel)]="newItemQuantity">
+    <br>
+    <button class="btn btn-primary" (click)="onAddItem()">Add to List</button>
+    <button class="btn btn-primary" (click)="onClearItem()">Clear</button>
+  </div>
+</div>

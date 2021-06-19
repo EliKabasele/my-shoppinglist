@@ -1,10 +1,18 @@
+import { ShoppingItem } from './models/ShoppingItem';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'shoppinglistV1';
+  shoppingItems: ShoppingItem[] = [];
+
+  onEnterItem(enteredItem: ShoppingItem) {
+    this.shoppingItems.push({
+      itemName: enteredItem.itemName,
+      quantity: enteredItem.quantity,
+    });
+  }
 }

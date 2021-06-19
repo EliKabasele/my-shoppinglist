@@ -1,0 +1,15 @@
+<ol class="list-group list-group-numbered">
+  <ng-container *ngFor="let shoppingItem of myShoppingItems">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold" [ngClass]="{itemDone: doneFlag === true}">{{shoppingItem.itemName}}  ({{shoppingItem.quantity}})</div>
+      </div>
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button type="button" class="btn btn-success" (click)="onDoneClicked()">Done</button>
+        <button type="button" class="btn btn-primary" (click)="onEditClicked()">Edit</button>
+      </div>
+    </li>
+
+  </ng-container>
+</ol>
+
