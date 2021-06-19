@@ -1,12 +1,21 @@
 <div class="row">
-  <div class="col-xs-10">
+  <div class="col-xs-12">
     <h3>Add new Item</h3>
     <label>Item Name</label>
-    <input type="text" class="form-control" [(ngModel)]="newItemName">
+    <input type="text" class="form-control" [(ngModel)]="newItemName" />
     <label>Quantity?</label>
-    <input type="text" class="form-control" [(ngModel)]="newItemQuantity">
-    <br>
-    <button class="btn btn-primary" (click)="onAddItem()">Add to List</button>
-    <button class="btn btn-primary" (click)="onClearItem()">Clear</button>
+    <input type="text" class="form-control" [(ngModel)]="newItemQuantity" />
+    <br />
+   
+    <div class="btn-group" role="group">
+      <button class="btn btn-primary btn-lg" (click)="onAddItem()">
+        <i class="bi bi-cart-plus" style="font-size: 1.5rem"></i> Add
+      </button>
+      <button class="btn btn-primary btn-lg" (click)="onClearItem()">
+        <i class="bi bi-backspace" style="font-size: 1.5rem"></i> Clear
+      </button>
+
+    </div>
+    
   </div>
 </div>

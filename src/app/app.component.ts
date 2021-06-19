@@ -15,4 +15,8 @@ export class AppComponent {
       quantity: enteredItem.quantity,
     });
   }
+
+  onListDeleted(emptyList: ShoppingItem[]) {
+    this.shoppingItems = emptyList;
+  }
 }

@@ -1,5 +1,5 @@
 import { ShoppingItem } from './../models/ShoppingItem';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-show-shoppiing-list',
@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ShowShoppiingListComponent implements OnInit {
   @Input() myShoppingItems: ShoppingItem[];
+  @Output() myDeletedList = new EventEmitter<ShoppingItem[]>();
 
   doneFlag = false;
 
@@ -20,4 +21,9 @@ export class ShowShoppiingListComponent implements OnInit {
   }
 
   onEditClicked() {}
+
+  onDeleteList() {
+    // this.myShoppingItems = [];
+    this.myDeletedList.emit([]);
+  }
 }
